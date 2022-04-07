@@ -1,1 +1,1 @@
-# wp-lsa-basic-forms
+# WP Basic Forms plugin
