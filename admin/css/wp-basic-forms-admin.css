@@ -1,0 +1,134 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+/* @group Data Tables */
+
+.ws_data_table {
+    width: 100%;
+    border-collapse: collapse;
+    border-color: #537DB9;
+    border-width: 1px;
+    border-style: solid;
+    margin-bottom: 15px;
+}
+
+.ws_data_table caption {
+    text-align: left;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.ws_data_table th {
+    text-transform: inherit;
+    white-space: nowrap;
+    background-color: #537DB9;
+    color: #FFFFFF;
+    padding: 2px 10px 2px 10px;
+    border-right: #FFFFFF;
+    border-width: 1px;
+    border-style: none dotted none none;
+}
+
+.ws_data_table th a, .ws_data_table th a:hover {
+    background-color: #537DB9;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.ws_data_table td {
+    padding: 5px 10px 5px 10px;
+    border-right: #cccccc;
+    border-width: 1px;
+    border-style: none dotted none none;
+    vertical-align: top;
+}
+
+.ws_data_table tr:nth-child(odd) {
+    background-color: #FFFFFF;
+}
+
+.ws_data_table tr:nth-child(even) {
+    background-color: #E6E6E6;
+}
+
+/* @end */
+
+/* @group tablesorter */
+
+.header {
+    cursor: pointer;
+}
+
+.headerSortDown:after {
+    content: " ▾";
+    font-family: Arial, sans-serif;
+}
+
+.headerSortUp:after {
+    content: " ▴";
+    font-family: Arial, sans-serif;
+}
+
+/* @end */
+
+/* WPBF Admin Forms */
+
+/* Style inputs, select elements and textareas */
+.wpbf-form input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+.wpbf-form label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+/* Style the submit button */
+.wpbf-form input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+/* Floating column for labels: 25% width */
+.wpbf-form .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.wpbf-form .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.wpbf-form .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .wpbf-form .col-25, .wpbf-form .col-75, .wpbf-form input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+/* @end */

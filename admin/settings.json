@@ -1,0 +1,114 @@
+{
+  "menu_page": {
+    "page_title": "Basic Forms: General Info",
+    "menu_title": "Basic Forms",
+    "capability": "manage_options",
+    "menu_slug": "wp_basic_forms_settings",
+    "callback": "plugin_main_page_content",
+    "icon": "dashicons-database",
+    "position": "3"
+  },
+  "submenu_pages": {
+    "main": {
+      "page_title": "WP Basic Forms: General",
+      "menu_title": "General Info",
+      "capability": "manage_options",
+      "menu_slug": "wp_basic_forms_settings",
+      "callback": "plugin_main_page_content",
+      "sections": {
+        "base": {
+          "id": "wp_basic_forms_settings",
+          "title": "General Settings",
+          "callback": "section_callback",
+          "description": "Main configuration settings for all databases.",
+          "settings": {
+            "name": {
+              "id": "wp_basic_forms_title",
+              "title": "Database Prefix",
+              "callback": "wp_basic_forms_textfield_render",
+              "args": {
+                "id": "wp_basic_forms_title"
+              }
+            }
+          }
+        }
+      }
+    },
+    "databases": {
+      "page_title": "List of Forms/Databases",
+      "menu_title": "Forms",
+      "capability": "manage_options",
+      "menu_slug": "wp_basic_forms_db",
+      "callback": "plugin_forms_page_content",
+      "sections": {
+        "add_form": {
+          "id": "wp_basic_forms_add",
+          "title": "Create New Form",
+          "callback": "section_callback",
+          "description": "Create a new form and database.",
+          "settings": {
+            "form_id": {
+              "id": "wp_basic_forms_id",
+              "title": "Form ID",
+              "callback": "wp_basic_forms_textfield_render",
+              "args": {
+                "id": "wp_basic_forms_id"
+              }
+            },
+            "form_name": {
+              "id": "wp_basic_forms_name",
+              "title": "Form Title",
+              "callback": "wp_basic_forms_textfield_render",
+              "args": {
+                "id": "wp_basic_forms_name"
+              }
+            },
+            "form_page": {
+              "id": "wp_basic_forms_page",
+              "title": "Select Form Page",
+              "callback": "wp_basic_forms_dropdown_pages_render",
+              "args": {
+                "id": "wp_basic_forms_page"
+              }
+            }
+          }
+        }
+      }
+    },
+    "submissions": {
+      "page_title": "Submissions",
+      "menu_title": "Submissions",
+      "capability": "manage_options",
+      "menu_slug": "wp_basic_forms_submissions",
+      "callback": "plugin_submissions_page_content",
+      "sections": {}
+    },
+    "logs": {
+      "page_title": "Event Logs",
+      "menu_title": "Event Logs",
+      "capability": "manage_options",
+      "menu_slug": "wp_basic_forms_logs",
+      "callback": "plugin_logs_page_content",
+      "sections": {
+        "base": {
+          "id": "wp_basic_forms_logs",
+          "title": "Event Logs",
+          "callback": "section_callback",
+          "description": "Errors and notifications.",
+          "settings": {
+            "logs": {
+              "id": "wp_basic_forms_logs",
+              "title": "Notification Logs",
+              "callback": "wp_basic_forms_logs_render",
+              "args": {
+                "id": "wp_basic_forms_logs",
+                "logdir": "forum_logs"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
